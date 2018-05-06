@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/index/" method="post">
+    {% csrf_token %}
+    <input type="text">
+    <input type="submit" value="提交">
+    <input id='btn' type="button" value="Ajax提交">
+
+
+</form>
+
+<script src="/statics/jquery-3.1.1.js"></script>
+<script src="/statics/jquery.cookie.js"></script>
+<script>
+    $(function () {
+        $.ajaxSetup({
+           beforeSend:function(xhr,settings) {
+               xhr.setRequestHeader('X-CSRFToken',$.cookie('csrftoken'));
+           }
+        });
+        
+        
+        
+        
+        
+        $('#btn').click(function () {
+            $.ajax({
+                url : '/index/',
+                type:'POST',
+                data : {username:'root'},
+                success:function (arg) {
+                    console.log(arg);
+                }
+            })
+        });
+    })
+
+</script>
+
+</body>
+</html>

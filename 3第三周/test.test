@@ -1,0 +1,5 @@
+2017-10-30 11:08:34,095 - root - DEBUG - loger debug message
+2017-10-30 11:08:34,095 - root - INFO - loger inf message
+2017-10-30 11:08:34,095 - root - WARNING - loger warning message
+2017-10-30 11:08:34,095 - root - ERROR - loger error message
+2017-10-30 11:08:34,095 - root - CRITICAL - loger critical message

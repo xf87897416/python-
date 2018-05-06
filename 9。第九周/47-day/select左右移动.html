@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特殊t</title>
+    <style>
+        #box1,#chose{
+            float:left;
+        }
+        #end{
+            margin-top: -90px;
+            margin-left: 110px;
+        }
+        #box1{
+            height: 100px;
+            width: 50px;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box1">
+    <select multiple="multiple" size="10" id="left">
+        <option>book</option>
+        <option>book2</option>
+        <option>book3</option>
+        <option>book4</option>
+        <option>book5</option>
+        <option>book6</option>
+    </select>
+</div>
+
+
+<div id="choice">
+    <input class="add"     type="button" value="--->" onclick="add()"><br>
+    <input class="remove"  type="button" value="<---" onclick="remove();"><br>
+    <input class="add-all" type="button" value="====>" onclick="ADDall()"><br>
+    <input class="remove-all" type="button" value="<===" onclick="remall()">
+</div>
+
+
+<div id="end">
+    <select multiple="multiple" size="10" id="right">
+        <option>book9</option>
+    </select>
+</div>
+
+<script>
+
+     function add(){
+         var right=document.getElementById("right");
+         var options=document.getElementById("left").getElementsByTagName("option");
+         for (var i=0; i<options.length;i++){
+             var option=options[i];
+             if(option.selected==true){
+                   right.appendChild(option);
+                    i--;
+             }
+         }
+     }
+
+    function ADDall(){
+         var right=document.getElementById("right");
+         var options=document.getElementById("left").getElementsByTagName("option");
+         for (var i=0; i<options.length;i++){
+             var option=options[i];
+             right.appendChild(option);
+             i--;
+         }
+     }
+    function remall() {
+     var left=document.getElementById("left");
+     var options=document.getElementById("right").getElementsByTagName("option");
+     for (var i=0;i<options.length;i++){
+         var option=options[i];
+         left.appendChild(option);
+         i--;
+     }
+    }
+
+    function remove() {
+        var left=document.getElementById("left");
+        var options=document.getElementById("right").getElementsByTagName("option");
+        for (var i=0;i<options.length;i++){
+            var option=options[i];
+            if(option.selected==true){
+                left.appendChild(option);
+                i--;
+            }
+        }
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

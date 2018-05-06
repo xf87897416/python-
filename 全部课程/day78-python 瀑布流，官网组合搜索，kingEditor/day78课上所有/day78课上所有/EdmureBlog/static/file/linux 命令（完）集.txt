@@ -1,0 +1,2057 @@
+ls -a 显示隐藏文件
+   -h 单位转换	
+   -l 长格式
+   -d 显示目录属性
+   -i id
+   -r 逆序显示
+   -R 递归显示旗下所有目录 
+cd ~USERNAME
+进入指定用户家目录
+  cd -  ：回看目录 
+
+type：显示指令类型（内置命令和外部命令）
+date：时间
+date 02(月)26（号）10（小时）49（分）13（年）.30（秒）
+      月日小时分钟
+获得命令帮助：help COMMAND   
+ man	COMMAND
+分章节：1用户命令
+        2系统调用
+        3库用户
+        4特殊文件（设备文件）
+        5文件格式
+        6游戏 
+        7杂项  
+        8管理命令（/sbin,/usr/sbin,/usr/local/sbin）
+  翻屛 后 space
+       前 b
+       后一行 回车
+       前一行  k
+
+info COMMAND	在线文档
+文档：/usr/share/doc
+         
+echo -e "hello\n im ok "  #\n 换行符
+print "hello world\n im come here\n"
+
+文件系统
+/boot:系统启动相关的文件，如内核initrd，以及grub
+/dev:设备文件：
+       块设备：随机访问，数据块
+       字符设备：线性访问，按字符为单位
+/etc:配置文件 
+/home :用户家目录，每一个用户家目录默认为/home/USERNAME
+/root : 管理员的家目录
+/lib ：库文件
+     静态库，  .a
+     动态库   .dll,so(shared object)
+     /lib/modules : 内核模块文件
+/media : 挂载点目录  ，移动设备
+/mnt ：额外的临时文件系统  
+/opt :可选目录，第三方程序安装目录
+/proc ：伪文件系统，内核映射文件
+/sys ：伪文件系统，跟硬件设备相关的属性映射文件
+/tmp ：临时文件
+/var ：可变化的文件
+/bin : 可执行文件，用户命令
+/sbin :管理命令
+
+/usr :只读文件 shared ，read-only
+  /usr/bin
+  /usr/sbin
+  /usr/lib
+
+命名规则：
+1 长度不能超过255字符
+2 不能用/当文件名
+3 严格区分大小写
+
+目录管理
+ls 
+pwd
+cd
+
+
+ mkdir：创建空目录
+  -p ：递归创建 
+/root/x/y/z
+#tree:查看目录树
+mkdir /root/{a,b,c}  # {}命令展开
+
+
+删除目录 : rmdir  (只能删除空目录)
+         -p
+
+文件创建和删除
+#touch 
+   -a 只更改访问时间
+   -m 只更改修改时间
+   -t 使用[[CC]YY]MMDDhhmm[.ss] 格式的时间而非当前时间
+   -c 不创建任何文件
+#stat
+
+创建文件，可以用文件编辑器
+ASCII:
+ 
+128不同字符：
+  二进制：
+   2^6=0,63
+   2^7=0,127
+   000 0000 - 111 1111 
+
+
+nano
+ 
+删除文件：
+rm  -f  #强制删除
+    -i  #删除前确认
+    -I  #在删除超过三个文件或者递归删除前要求确认。此选项比-i 提示内容更少，但同样可以阻止大多数错误发生
+
+    -r # 递归删除
+
+
+复制移动  只复制文件
+
+cp：copy
+cp file1 file2 file3 
+最后一个必须是目标地址
+     -r 递归复制 （文件和目录）
+     -f 强行覆盖 
+     -a 完全复制属性，常用于备份
+     -P 保持复制链接
+
+install  复制文件！指定属性
+        -d   DIRECOTRY 创建目录
+ 
+
+
+  
+
+目录管理：
+ls  cd pwd mkdir rmdir  tree
+
+文件管理：
+touch  stat file  rm cp mv nano 
+
+日期时间
+date clock hwclock  cal
+
+
+查看文本
+cat 、tac（cat 反过来）、 more（先后翻）、less（分页预览 ，上下键空格）、
+
+head：查看前n行
+tail：查看后n行
+-n 2 指定多少行
+tail -f ：查看尾部，不退出，监控后续追加 一般用于日志文件监控
+
+文本处理：
+cut、join、sed、awk
+
+
+
+awk '{[pattern] action}' {filenames}   # 行匹配语句 awk '' 只能用单引号
+
+
+
+ 使用","分割
+ $  awk -F, '{print $1,$2}'   log.txt
+
+
+
+
+
+
+
+
+database：数据库
+
+关系型数据库：
+表：二维表：
+
+文本文件：
+Tom：23：male：2013/05/01
+
+
+cut: 
+   -d:指定字段分隔符，默认空格
+   -f ： 指定要显示的字段 
+     -f 1,3   目标地址
+     -f 1-3  （1到3）
+
+文本排序 sort
+-n :数值排序
+-r ：降序
+-t：字段分隔符
+-k 以哪个字段为关键字进行排序
+-u：排序号相同行只显示一次
+-f：忽略大小写
+
+
+uniq:
+   -c:显示文件中重复的次数
+   -d：只显示重复的行
+
+文本统计：wc
+              -l：行数
+              -w ：单次数
+              -c ：字节
+
+
+字符处理命令 ：tr -转换或者删除字符
+tr  option  ... set 1 [set2]
+ 
+  -d:删除出现在字符集中的所有字符
+  -c：用字符串1中字符集的补集替换此字符集，要求字符集为ASCII
+bash及其特性：
+-s 删除所有重复出现字符序列，只保留第一个；即将重复出现字符串压缩为一个字符串。
+
+shell：外壳
+GUI:Gnome，KDE，Xface
+CLI:sh，csh
+
+
+bash:
+1、命令历史
+2、管道、重定向
+3、命令别名
+4、命令行编辑
+5、命令行展开
+6、文件名统配
+7、变量
+8、编程 
+
+命令行编辑
+crtl+a ：跳到行首
+crtl+e ：行尾
+crtl+u ： 删除光标至命令行首
+crtl+k ： 删除光标至命令行位
+
+history  
+  -c：清空所有历史
+  -d ：删除  第n个  5以后10个
+  -w： 保存历史到文件中
+
+！100 ：执行第100条历史命令
+    ！！：执行上一条命令
+！string ：执行最近一个指定字符开的命令
+ESC , . :引用前一个命令最后一个参数
+
+环境变量
+PATH：命令搜索路径
+HISTSIZE:命令历史大小
+SHELL ：
+
+
+
+命令别名
+alias CMDALIAS
+ualias
+\cmd #使用命令本身，不适用别名
+
+命令替换$(COMMAND)   , `COMMAND`  反引号
+touch ./file-$（date +%F-%H-%M-%S）
+
+
+bash支持的引号：
+``:命令替换
+"":弱引用，可以实现变量替换
+''：强引用，不完成变量替换
+
+
+
+文件名通配 , globbing 
+ * 任意长度的任意字符包括空
+？ 单个任意字符
+[] ：匹配指定范围内的任意单个字符
+[0-9] [a-z] [A-Z] [0-9a-zA-Z] [a-zA-Z]
+   [:space:] :空白字符
+   [:punct:] :标点字符
+   [:lower:] :小写字母
+   [:upper:] :大写字母
+   [:alpha:] :大小写字母
+   [:digit:] ：数字
+   [:alnum:] ：数字和字母
+#man 7 glob
+[^]:指定范围外的任意单个字符 
+
+权限
+r4 ,w2, x1
+rw-rw---- 660
+rwxrwxr-x 775
+
+用户：UID,/etc/passwd
+组：GID,/etc/group
+
+影子口令：
+用户：/etc/shadow
+组：/etc/gshadow
+
+
+加密方法：
+对称加密：加密和解密使用同一个密码
+公钥加密：每个密码都是成对出现，一个为私钥，一个为公钥
+单项加密，散列加密：提取数据特征码，常用于数据完整性校验
+1，雪崩效应
+2，定长输出
+  MD5 128位定长输出
+  SHA1： 160位定长输出
+
+
+用户管理
+
+useradd USERNAME 
+groupadd GRPNAME
+userdel
+usermod 更改
+passwd
+chsh
+chfn
+finger
+id
+chage
+
+组管理命令
+groupadd，groupdel，groupmod，gpasswd
+
+权限管理：
+chown ，chgrp chmod umask
+
+
+useradd -u 1000 xf
+-u :UID
+-g GID(基本组)
+useradd -g mygroup xf
+        -G mygroup
+        -c 注释
+        -d 指定家目录
+        -s 指定shell路径
+     -r：添加系统用户
+
+/etc/login.defs
+
+
+userdel:
+userdel[option] USERNAME
+        -r  删除用户家目录，一般不会删  
+
+finger USERNAME：查看用户账号信息
+
+修改用户账号属性：
+usermod
+-u  UID
+-g  GID
+-a -G  GID:不使用-a，会覆盖此前附加组   添加附加组
+-s ：改shell
+-l ：改登陆名
+-L :锁定账号
+-U ：解锁账号
+
+chsh  USERNAME：改变用户shell
+chfn  USERNAME:修改注释（finger）信息
+
+密码管理：
+passwd 【USERNAME】：
+ --stdin  指定用户名
+-l ：锁定
+-u :解锁
+-d ：删除
+
+
+pwck：检查用户账号完整性
+
+组管理：
+groupadd
+-g GID
+-r ：添加为系统组
+
+groupmod
+-g GID
+-n GRPNAME   改用户名
+
+groupdel  #删除用户组
+gpasswd ：为组设定密码
+-d 【USRNAME】[GROUP]
+
+
+chage #改变用户密码
+-d :最近一次修改的时间
+-E ：过期时间
+-I :非活动时间
+-m ：最短使用期限
+-M ：最长使用期限
+-W ：警告时间
+
+chown:改变文件属主（仅管理员用）
+  -R ：递归修改
+  --reference=/path/to/somefile file,...
+
+chgrp :改变文件属组
+  -R
+  --reference=/path/to/somefile file,...
+
+chown ：USERNAME:GROUPNAME FILE。。。
+   
+chmod：修改文件权限
+修改三类用户权限 ：
+chmod mode file
+-R 
+ --reference=/path/to/somefile file,...
+
+修改某类用户某些权限 ：
+u g o a 
+chmod u=rwx /tmp/acd
+chmod go=rw
+      g=rw,o=rx
+
+
+修改某类用户某位或某些权限：
+chmod u-x /tmp/abc
+      u+x,g-x
+
+
+
+手动添加用户hive，基本组为hive（5000），附加组为mygroup
+
+umask：遮罩码
+666-umask   文件
+777-umask   目录
+
+文件，默认不能具有执行权限，怎么算都没有
+
+022 管理员
+002 普通用户
+
+登陆式shell：
+正常通过某终端邓丽
+su - USERNAME
+su -l USERNAME
+
+非登录式shell：
+su USERNAME
+图形终端下打开命令窗口
+自动执行shell脚本
+
+bash的配置文件：
+全局配置
+/etc/profile, /etc/profile.d/*.sh,  /etc/bashrc
+
+个人配置
+~/.bash_profile, ~/.bashrc
+
+profile类的文件：
+设定环境变量
+运行命令或脚本
+
+bashrc类的文件：
+设定本地变量
+定义命令别名
+
+登录时shell如何读取配置文件
+
+/etc/profile --> /etc/profile.d/*.sh --> ~/.bash_profile -->~/.bashrc -->/etc/bashrc
+
+非登录时shell如何读取配置文件
+~/.bashrc  --> /etc/bashrc --> /etc/profile.d/*.sh
+ 
+
+
+管道和重定向：>  < <<  >>
+
+运算器，控制器：cpu
+存储器：RAM
+输入设备/输出设备
+
+程序：指令和数据
+
+
+i/o重定向
+
+linux：
+>:覆盖输出
+>>:追加输出
+
+
+set 开关
+-C ：禁止对已存在文件使用覆盖重定向
+  强制覆盖输出，则使用>|
++C ：关闭上述功能
+2>:重定向错误输出
+2>>：追加
+
+&>：重定向标准输出或错误输出至同一个文件
+
+
+<：输入重定向
+<<: Here Document
+
+
+tee：保存到文件中，并且输出到显示器
+
+grep ：根据模式搜索文本，并将符合模式的文本显示
+Pattern:文本字符和正则表达式的元字符组合而成匹配条件
+   -i 忽略大小写
+   --color 高亮
+   -v ：显示没有被模式匹配到的行
+   -o ：只显示被模式匹配到的字符串
+   -E :使用扩展正则表达式
+   -A ？:其前多少行显示出来
+   -B :   后
+   -C :   前后
+
+
+正则表达式：REGEXP
+元字符：
+  . :任意单个字符
+[]  :匹配指定范围内的任意单个字符
+[^] :匹配指定范围外的任意单个字符
+
+
+
+
+字符个数：
+* ：匹配其前面的字任意次
+
+.* :任意长度的任意字符 （啥都可以）
+
+\？：匹配其前面的字符1次或0次
+\{m,n\}:匹配其前面的字符至少m次，至多n次
+  \{1,\}
+  \{0,3\}
+
+位置锚定：
+^:锚定行首，此字符后面的任意内容必须出现在行首
+$:锚定行尾
+^$:空白行
+
+
+单次锚定
+\< 或\b:其后面的任意字符必须作为单子首部出现
+\> 或\b :其前面的任意字符必须作为单子首部出现
+
+分组：
+\(\)
+  \(ab\)*
+   \1:引用前面第一个括号的内容
+grep  --color '\(.*\).*\1r'
+
+扩展正则表达式:egrep
+.
+[]
+[^]
+
+次数匹配
+*
+？
++：匹配其前面的字符至少1次  ！！！！！！！
+{m,n}
+
+
+|：or
+
+\.：表示点
+
+
+grep,egrep
+fgrep:不支持正则表达式
+
+
+
+
+SHELL：编程
+
+编译器，解释器
+
+编程语言：机器语言，汇编语言，高级语言
+
+静态语言：编译型语言
+ 强类型（变量）
+ 事前转换成可执行格式
+c,c++,JAVA,c#
+
+
+动态语言：解释型语言，on the fly 
+ 弱类型
+便捷式边执行
+php ,shell  python  perl
+
+面向对象：JAVA，python,perl ，c++
+面向过程：shell ，c
+
+
+变量类型：事先确定数据的存储格式和长度
+字符
+数值
+   整形
+   浮点型：11.23
+
+逻辑：1+1>2
+逻辑运算：
+
+与：只有一个为假，结果一定假
+或：只有一个为真，结果一定真
+
+
+bash变量类型：
+环境变量
+本地变量（局部变量）
+位置变量   $1 ,$2 ,.....
+           shift  轮替踢出下一个位置变量
+特殊变量 :  $?
+            $# :参数的个数
+            $* :参数列表
+            $@:参数列表   
+本地变量：
+set VARNAME=VALUE  ：作用于整个bash进程
+local VARNAME=VALUE  ：作用于当前代码段
+
+
+环境变量：作用域为当前shell进程及其子进程；
+export VARNAME=VALUE
+  "导出"
+
+特殊变量：
+$?:上一个命令的执行状态返回值：
+程序执行结果
+程序状态返回代码（0-255）
+0：正确执行
+1-255：错误执行，1,2,127 系统预留；
+
+输出重定向：
+>
+>>
+2>
+2>>
+&>
+
+/dev/null 数据黑洞
+
+撤销变量：
+unset VARNAME 
+
+查看当shell中变量：
+set
+
+
+查看当前shell中的环境变量：
+printenv
+env
+export
+
+脚本：命令的堆砌，按实际需要，结合命令流程控制机制实现的源程序
+
+shebang：魔术
+#!/bin/bash
+
+
+
+bash中如何实现判断？
+条件测试类型
+整数测试
+字符测试
+文件测试
+
+条件测试的表达式：
+[ expression ]     -->只能是整数比较才能使用
+[[expression]]
+test expression
+
+
+INT1=63
+INT2=77
+[ $INT1 -eq $INT2 ]
+[[ $INT1 -eq $INT2 ]]
+test $IN T1 -eq $INT2
+
+文件测试：
+-e FILE ：测试文件是否存在
+-f FILE : 测试文件是否为普通文件
+-d FILE ：测试指定路径是否为目录
+-r FILE ：测试当前用户对指定文件是否有读取权限；
+-w
+-x
+
+[ -e /etc/inittab  ]
+
+
+
+整数比较：
+  -eq：测试两个整数是否相等：比如$a -eq $b
+  -ne: 测试两个整数是否不等；不等，为真；相等为假；
+  -gt：测试一个数是否大于另一个数；大于为真；否侧假
+  -lt：测试一个数是否小育另一个数；小于是真，否则假
+  -ge：大于或等于
+  -le：小于或等于
+
+命令间的逻辑关系：
+逻辑与：&&
+ 第一个条件为假时，第二个条件不用判断，最终结果已经有；
+ 第一个条件为真，第二个必须判断；
+逻辑或：||
+
+如果用户user6不错在，就添加用户user6
+！id user6 && useradd user6
+id user6 || useradd user6
+
+
+如果/etc/inittab文件的行数大于100，就显示好大的文件：
+[ `wc -l /etc/inittab | cut -d ' ' -f1` -gt 100 ] && echo "大文件啊"
+
+
+变量名称：1、只能包含字母，数字和下划线，并且不能数字开头；
+          2、不应该跟系统中已有的环境变量重名；
+          3、最好做到见名知义；
+
+
+条件判断；控制结构：
+
+单分支if语句 
+if 判断条件；then
+ statement1
+ statement2
+ ...
+fi
+
+双分支的if语句：
+if 判断条件；then
+ statement1
+ statement2
+else
+  statement3
+  statement4
+...
+fi
+
+多分支的if语句：
+if判断条件；then
+  statement1 
+  ...
+  elif条件判断2；then
+  statement2
+  ...
+  elif判断条件3；then
+  ...
+ fi
+
+测试脚本是否有语法错误：
+bash -n 脚本  
+    -x ：单步执行
+
+
+引用变量：${VARNAME } ,有时可省略
+
+
+shell中的算术运算法：
+1、let 算术运算表达式
+
+2、c=$[$A+$B]
+
+3、c=$(($A+$B))
+
+4、expr 算术运算表达式，表达式中各操作数都要有空格，切使用命令引用
+ c=`expr $A + $B`
+
+ 
+exit:退出脚本 
+exit #
+如果脚本没有明确定义退出状态码，则为整个命令的状态码
+
+ 
+
+sed:模式空间
+默认不编辑原件，仅对模式空间中的数据做处理；耳后，处理就结束后，将模式空间打印至屏幕；
+
+
+sed `AddressCommand` file ...
+   -n ：静默模式，不显示模式空间的内容 
+   -i：直接修改源文件
+   -e SCRIPT  -e SCRIPT：同时执行多个脚本
+   -f /PATH/TO/SED_SCRIPT
+     sed -f /path/to
+   -r :表示使用扩展正则表达式
+
+Adress:
+1、startline,endline
+ 比如1,100
+$:表示最后一行
+
+2、/regexp/
+   /^root/
+3、/pattern1/,/pattern2/
+  第一次被pattern1匹配到行开始，至第一次被pattern2匹配到行结束，这中间的所有行
+4、linenumber
+  指定行
+5、startline，+N
+从startline开始，向后的n行；
+
+Command：
+   d:删除复合条件的行；
+   p：显示复合条件的行；打印
+   a  \string :在指定行后面追加新行，内容为string
+      \n:换行 
+   i  \string :在指定行前面追加新行，内容为string
+   r  file ：将指定文件的内容添加至符合条件的行处
+   w  FILE：将地址指定范围内的内容另存只指定文件中；
+   s/pattern/string/修饰符:查找并替换，默认只替换每行第一次被模式匹配到的字符串
+ 
+修饰符
+ g ：全局替换
+  i：查找时忽略大小写
+ 
+
+
+
+字符串测试：
+==
+!=  :不等,不等是真
+
+A=hellow
+B=hi
+$A = $B
+>
+<
+-n string: 测试指定字符串是否为空，空位真
+-s string：                不空 
+
+
+
+循环：进入条件，退出条件 
+for
+while
+until
+
+for 变量 in 列表； do
+循环体
+done
+
+for i 1 2 3 4 5 5 6 7 8 9 10；do
+加法运算
+done
+
+
+遍历完成之后退出；
+
+如何生成列表；
+{1..100}
+`seq [起始数[步进长度]] 结束数`
+
+1....100  
+
+
+for ((expr1;expr2;expr3));do
+循环体
+done
+
+
+
+
+
+
+vim编辑器
+
+文本编辑器，字处理器
+ASCII
+
+nano sed
+
+vi：Visual Interface
+vim:VI improved
+
+全屏编辑器，模式化编辑器
+
+打开文件
+vim +# /file  打开文件，并定位于#行
+vim +  /etc/xf   定位最后一行
+vim +/PATTERN :打开文件，定位至第一次被PATTERN匹配到的行首
+
+i  前
+a  后
+o  在当前光标 所在行的下方，新建一行，并输入
+
+I   行首
+A   行尾
+O   上方
+
+末行模式到编辑模式  esc esc
+
+wq == x
+
+编辑模式下退出
+ZZ  保存退出
+
+移动光标
+h、j、k、l
+#h 移动#个字符
+w ：移至下一个单词的词首
+e ：跳至当前或下一个单词的词尾
+b ：          前
+
+
+行内跳转：
+0 ：绝对行首
+^ :行首的第一个非空白字符
+$ :绝对行尾
+
+
+行间跳转
+#G ：跳转至第#行
+G ：最后一行
+
+
+翻屛
+ctrl+f 向下翻一屏
+crtl+b 向上翻一屏 
+
+x删除光标所在处单个字符
+
+删除命令 :d
+#dw ,#de, #db
+
+#dd :删除光标所在行内的#行
+
+末行模式下：
+startadd，endadd d
+. :当前行
+$ :最后一行
++#:向下#行
+
+
+粘贴命令p
+P ： 下  后
+p ： 上  前
+
+
+复制命令：y
+用法通d命令
+
+
+修改：先删除内容，再转换为输入模式
+c ：用法同d
+
+r ：替换单个字符
+
+
+u 撤销最近一次操作
+#u 撤销 #次
+
+ctrl +r 撤销撤销
+
+重复之前一次编辑操作 
+.
+
+
+可视化模式
+v ：按字符选取
+V ：直接选取行
+
+查找
+/PATTERN
+?PATTERN    n向下跳转 N向上跳转
+
+
+查找并替换
+在末行模式下使用s命令
+：.,$-1s/bin/too/g
+% :全文
+
+vim编辑多个文件
+：next 下一个文件
+：prev 上一个文件
+：last 最后一个
+：first 第一个
+
+退出
+：qa 全部退出
+
+
+分屏  显示一个文件！
+ctrl +w ，s ：水平拆分窗口
+ctrl +w ,v :垂直拆分
+
+
+ctrl +w ，ARROW方向键
+
+：qa 关闭所有窗口
+
+
+分窗口编辑多个文件
+vim -o：水平
+vim -O：垂直分割
+
+
+将当前文件中部分内容另存为另外一个文件
+末行模式下使用w命令
+
+：w
+：ADDE1，ADDER2w /path/to/somenwhere
+
+
+将另外一个文件的内容填充字当前文件中
+：r /etc/passwd
+
+
+跟shell交互
+：！COMMAND
+
+
+显示或取消行号
+：set number 
+：set nu
+
+：set nonu  取消
+
+2、显示忽略或区分字符大小写
+ignorecase
+：set ic
+
+：set noic 
+
+3、设定自动：
+
+:set autoindent
+:set ai
+:set noai
+
+4、查找到的文本高亮显示或取消
+：set hlsearch
+：set nohlsearch
+
+5、语法高亮
+：syntax on
+ off
+
+
+配置文件
+/etc/vimrc
+~/.vimrc
+
+
+declare -i word #声明word为整数
+
+
+
+测试：
+整数测试
+-le 
+-lt
+-ge
+-gt
+-eq 相等
+-ne 不等
+ :
+字符测试
+==
+!=
+>
+<
+-n     是否为不空 ，不空为真
+-z   测试字符串是否为空
+
+
+
+文件测试
+-e   文件存在
+-f  表示这个文件是一个一般文件(并不是目录或者设备文件)
+-d  表示这是一个目录
+-r
+-w
+-x
+-s 文件大小不为零
+
+组合测试条件
+if [ $# -gt 1 ];then
+
+
+-a :与关系
+-o ：或关系
+!  ：非关系
+
+if [ $# -gt 1 -a $# -le 3 ]    相等于下面
+if [ $# -gt 1 ] && [ $# -le 3 ]
+
+
+
+let I=$[$I+1]
+sum=$[$sum+$I]
+
+let I+=1  相当于 let I++
+     -=           
+                     I--
+
+/=
+*=
+%= 商等
+
+
+文件查找：
+locate：
+非实时，模糊查找根据全系统文件数据库进行；
+#update，手动生成文件数据库
+速度快
+
+find
+   实时
+   精确
+   遍历指定目录中所有文件查找，速度慢
+   支持众多查找标准
+find 查找路径 查找标准 查找到以后的处理运作
+查找路径：默认当前目录
+查找标准：默认指定下所有文件
+处理运作：默认显示
+
+
+匹配标准：
+-name 'filename':对文件名精确查找
+*：任意长度的任意字符
+？
+[]
+
+-iname ‘filename’：文件名匹配时不区分大小写
+-regex PATTREN：基于正则表达式进行文件名匹配
+
+
+-user USERNAME：根据属主查找
+-group GROUPNAME：根据属组查找
+
+-uid UID  根据uid查找
+-gid GID
+
+-nouser ：查看没有属主的文件
+-nogroup：查看没有属组的文件
+
+-type :根据文件类型查找
+f
+d
+。。。
+
+
+-size  +- 
+  #k
+  #m
+  #g
+
+组合条件：
+-a
+-o
+-not
+
+-perm mode
+      /mode  /744 一个匹配即可
+      -mode  :-755 精确匹配权限
+ 
+find ./ -perm -001
+
+运作：
+ -print：显示
+ -ls ：类似ls -l 的形式显示每一个人文件的详细
+ -ok COMMAND {} \;  每次操作需要确认
+ -exec COMMAND {} \;   查找后执行
+
+xargs
+
+
+特殊权限
+passwd：s
+SUID ：运行某个程序是，相应进程的属主是程序文件自身的属主，而不是启动者
+chmod u+s FILE
+      u-s
+如果FILE本来就有执行权限，则SUID显示为s；否则S
+
+SGID
+  chmod g+s FILE
+  chmod g-s FILE
+
+
+sticky ：在一个公共目录，每个都可以创建文件，删除自己的文件，但不能删别人的
+  chmod o+t  DIR
+  chmod o-t  DIR
+
+
+
+
+文件系统访问列表
+tom： 
+  tom，tom基本组
+
+FACL:利用文件扩展保存额外的访问控制权限
+
+
+setfacl 
+
+ -m  设定
+   u：UID：perm 
+
+ -x  取消 
+   
+   u：UID
+   g：GID
+
+
+getfacl ：查找特殊权限
+
+
+几个命令：
+w
+who
+每隔5秒钟，就来查看hadoop是否已经登录，如登陆，显示出来，并退出
+
+sleep
+
+woami
+ 
+last , 显示/var/log/wtmp文件，显示用户登录历史及系统重启历史	
+   -n #：显示最近#次
+lastb ，/var/log/btmp 文件，显示用户错误的登录尝试 
+  -n 
+
+lastlog；显示每一个用户最近登录信息
+ -u USERNAME ：显示特定用户最近登录信息
+
+basename
+$0 :执行脚本的脚本名
+
+mail   
+
+hostname 
+
+生成随机数：RANDOM
+$(($RANDOM%5))
+0-4
+
+随机数生成器：熵池
+/dev/random :
+/dev/urandom
+
+
+
+
+面向过程
+  控制结构
+    顺序结构
+	选择结构
+	循环结构
+
+	
+case 语句:选择结构
+
+case SWITCH in
+value1）
+  statement
+  。。。
+  ;;
+ value2)
+  statement
+  ...
+  ;;
+*)
+  statement
+  ...
+  ;;
+esac
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+终端类型
+console ：控制台
+pyt：物理终端  vga
+tty：虚拟控终端  vga
+ttyS：串行终端
+pts/#:伪终端
+
+
+
+
+ ln -s -v 源文件 目标文件 
+ 
+ 
+硬链接：
+  1、只能对文件创建，不能应用于目录
+  2、不能跨文件系统；
+  3、创建硬链接会增加文件被链接的次数；
+  
+  
+  符号链接：
+    1、可应用于目录
+	2、可以跨文件系统
+	3、不会增加链接文件的链接次数
+	4、其大小为指定的路径所包含的字符个数
+
+
+du 
+   -s 
+   -h
+   
+df [选项] [文件]
+  -H 等于“-h”，但是计算式，1K=1000，而不是1K=1024
+  -P 输出格式为POSIX
+  -h 方便阅读方式显示
+  
+链接
+
+设备文件： 
+    b ：按块为单位，随机访问的设备
+	c： 按字符为单位，线性设备
+
+    b:硬盘
+	c：键盘
+
+/dev  
+    主设备号
+	   标识设备类型
+	次设备号
+	   标识同一种类型中不同设备
+	
+创建设备文件 
+	
+	mknod [OPTION]... NAME TYPE [MAJOR MINOR]
+	  
+	  -m：设置权限模式
+
+     mknod /dev/ttyusb c 188 32
+	
+	
+硬盘设备的设备而文件名
+  IDE ,ATA :hd
+  SATA:sd
+  SCSI ：sd
+  USB：sd
+     a，b，c，。。。区别
+
+	 
+查看当前系统识别多少硬盘
+fdisk -l  （/dev/to/some_device_file）
+
+高级格式化：mkfs -t ext3   创建文件系统
+
+	 
+	管理磁盘分区
+	fdisk /dev/sda
+	   p:显示当前硬件的分区，包括没保存的改动
+	   n：创建新分区
+	     e：扩展
+		 p：主分区 只有四个
+	   
+	   d：删除一个分区
+	   w：保存退出
+	   q：不保存退出
+	   t：修改分区类型
+	     L ：查看所有类型df
+		 
+	   
+	   l：显示所支持的所有类型
+	   
+	   
+	cat /proc/partitions
+	
+	partions  > partx
+	
+	partprobe /dev/sda   重新读取内核识别分区
+	
+
+	
+文件系统管理
+重新穿件文件系统会损坏原有文件
+
+
+mkfs：make file system
+	-t  系统类型
+文件系统类型：
+  ext2
+  ext3
+	
+cat /proc/filesystems :查看当前系统内核所支持的文件系统
+	
+	　-c : 在制做档案系统前，检查该partition 是否有坏轨
+	
+专门管理ext系列文件：
+mke2fs    格式化
+   -j 创建ext3类型文件系统
+	-b 指定块大小，默认4096 ；可取值1024,2048,4096
+	-L ：指定分区卷标；
+    -m # ：指定预留超级用户的百分比
+	-i #：指定多少字节
+	 -N #:指定inode个数；
+	 -F ：强制创建文件系统
+	 -E ：用户指定额外文件系统属性
+	  
+	
+	blkid ：查看磁盘信息属性
+	UUID
+	TYPE 
+	LABEL
+	
+e2label ：用于查看或定义卷标
+ e2label 设备文件 卷标：直接设定卷标
+ 
+ tune2fs：调整文件系统的相关属性
+  -j ：不损坏原有数据，讲ext2升级为ext3
+  -L LABEL ：设定或修改卷标
+   -m #  ：调整预留百分比
+   -r # ：指定预留块数
+   -o ：设定默认挂载选项
+      acl
+	-c # ：指定挂载次数大道#次后自检，0或-1表示关闭此功能 
+    -i #：每挂载使用多少天后自检 0或-1表示关闭此功能
+	-l ：显示超级块中信息
+  
+ dumpe2fs：显示文件属性信息
+    -h ：只显示超级块中的信息
+	
+fsck：检查并修复linux文件系统
+  -t FSTYPE ：指定文件系统类型
+  -a ：自动修复 
+	
+	
+e2fsck：专用于修复ext2/ext3文件系统
+  -f ：强制检查
+  -p：自动修复
+	
+挂载：将新的文件系统关联至当前根文件系统
+卸载：讲某文件系统与当前根文件系统的关联移除
+
+mount：挂载
+ 设备 ：
+    设备文件：/dev/sda5
+	卷标：LABEL=“”
+	UUID：UUID=“”
+	
+	挂载点：目录
+	  
+	umount ：卸载文件系统
+	   设备
+	   挂载点
+	   
+	   卸载注意事项：1没有被使用
+	                 2事先存在
+					 3目录中原有文件会被隐藏
+	
+	
+mount：显示当前已挂载系统设备
+
+
+-o loop 挂载回环设备
+-a ：表示挂载/etc/fstab文件中定义的所有文件系统
+-n ：默认情况下每挂载一个设备是都会把信息写入/etc/mtab文件；
+使用-n选项意味着挂载设备时不写入此文件
+	
+-t 	FSTYPE  指定挂载文件系统类型：
+-r ：只读挂载  （光盘重用）
+-w ：读写挂载
+	
+-o ：指定额外的挂载选项，也指定文件系统启用的属性；
+  remount ：重新挂载当前文件系统
+  ro ：只读
+  rw ：读写
+	
+	
+mount /dev/sda5  /mnt/test	
+文件系统的配置文件/etc/fstab
+    OS在初始时，会自动挂载此文件中定义的所有文件系统
+ 要挂载的设备    挂载点   文件系统类型    挂载选项    转储频率（多少天做一次完全备份）    文件系统检测次序（只有根为1）
+	/dev/sda5     /mnt/test   ext3         defaults   0   0
+
+	
+	
+	
+swap 分区：	
+free -m
+	
+	fdisk命令中，调整分区类型为82
+	
+	创建交换分区
+	mkswap /dev/sda8
+	 -L LABEL
+	 
+	swapon /dev/sda8
+	  -a ：启用所有在/etc/fstab文件中定义的所有交换
+	swapoff /dev/sda8
+	
+	
+	回还设备
+	loopback，使用软件来模拟实现硬件
+	
+	dd命令
+	if=数据来源
+	of=数据存储目标
+	bs=1
+	count=2
+	seek# :创建数据文件时，跳过的空间大小
+	
+	
+	dd if=/dev/sda of=/mnt/user/mbr.backup bs=512 count=1    
+	dd if=/mnt/user/mbr.backup of=/dev/sda bs=512 count=1      
+	
+	dd if=/dev/zero of=/var/swapfile bs=1m count=1024
+	dd if=/dev/zero of=/dev/hda bs=512 count=1    #抹除所有硬盘分区
+	
+	fuser:验证进程正在使用的文件或套接字符 
+	   -v ：查看某文件上正在运行的进程
+	   -k ：提出用户
+	   -m ：与挂载点有关
+	   
+	   fuser -km  /mnt/test  :终止访问挂载点所有进程
+	
+	
+	
+	
+	压缩，解压缩命令
+	压缩 ：gz ，bz2，xz，zip
+	
+	gzip：.gz
+	gzip：/path/to/somefile:压缩万会删除源文件
+	  -d  ：解压缩
+	  -#：指定压缩比，默认是6
+	gunzip：解压
+	
+	zcat /path/to/somefile.gz :不解压的情况下，查看文本文件的内容
+	
+	
+	bzip2：.bz2
+	比gzip有着更大的压缩比的工具  使用方法同上
+	 bzip2 /path/to/somefile 
+	   -d  解压缩
+	   -#：1-9 ，默认6
+	   -k：压缩时保留源文件
+	   
+	   bunzip2 /path/to/somefile.bz2
+	   bzcat
+	   
+	   
+	   zip:
+	     zip FILNAME.zip FILE1 FILE2 ...
+	   
+	archive: 归档，归档本身并不意味着压缩
+	   
+	  tar ：归档工具
+	     -c：创建归档
+		 -f FILE.tar ：操作的归档文件 
+	     -x：展开归档
+	     --xattrs：归档时，保留文件的扩展性信息
+		 -t：不展开归档，查看里面的文件
+	
+	-zcf：归档并调用gzip压缩
+	-zxf：调用gzip解压缩并展开归档
+	
+	练习：写一个脚本
+	从键盘让用户输入几个文件，脚本能够将此几个文件归档压缩成一个文件
+	read： 
+	   -p “PROMPT”：给出提示
+	   
+	   
+	   
+	   
+	脚本编程：
+	顺序结构
+	选择结构
+	if 
+	case
+	
+	循环结构
+	for
+	while
+	until
+	
+	
+	while循环：适用于循环次数未知的场景 ，要有退出条件
+语法：
+   while CONDITION;do
+     statement
+     ...
+    done
+
+	
+	
+	until CONDITON；do
+	statement
+	...
+	done
+	
+	ping -c#    次数 
+	     -w#    每次多少秒
+	
+	
+	进入循环，条件不满足
+	退出循环；条件满足
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+计算100以内所有的正整数的和	
+	    
+	
+	RAID
+	级别：
+	0 条带  性能提升：读写   不安全
+	至少2块
+	1镜像   性能提升：写性能下降，读性能提升  比较安全
+	至少两个
+	2
+	3
+	4 ：校验码
+	5 ：轮流校验码  读写提升  比较安全  至少3块
+	10    至少4块
+	01     至少4块
+	50    至少6块
+	JBOD ：增加容量   至少2块
+	
+	
+	
+	
+	md:
+	mdadm:将任何快设备做成raid
+	模式化命令：
+	创建  -C 
+	         专用选项：
+			   -l：级别
+			   -n：设备个数
+			   -a yes/no：自动为其创建设备文件
+			   -c：CHUNK大小
+			   -x：
+	管理  --add， --del --remove 
+	    mdadm /dev/md# --fail /dev/sda1  测试损坏一块盘
+		                -f  
+	
+	监控  -F 
+	增长  -G
+	装配  -A  
+	
+	停止阵列
+	mdadm -S /dev/md127
+	  --stop
+	  
+	
+	
+	
+	
+	查看raid郑列的详细信息
+	mdadm -D /dev/md#
+	RAID0
+	2G：
+	   4:512MB 
+	   2：1GB
+	
+	
+	例子1：
+	  把两块硬盘或分区格式化fdisk  类型变为fd  w保存
+	  mdamd -C /dev/md0 -ayes -l0 -n2 /dev/sd[b,c]1
+	  cat /prco/mdstat   查看raid
+	  mdadm -D /dev/md0   详细查看raid
+	mke2fs -j /dev/md0  格式化硬盘
+	mount /dev/md0 /mnt
+	
+	
+	
+	
+	watch ：周期性执行指定命令，并以全屏方式显示结果
+	  -n# ：指定周几长度，单位秒 默认2
+	
+	watch -n # ‘COMMAND‘
+	
+	
+	将当前raid信息保存至配置文件，以方便以后进行装配：
+	mdadm -D --scan > /etc/mdadm.conf
+	
+	
+	MD,DM
+	  /dev/md#
+	 meta device 
+	 
+	 
+	 DM :Device Mapper 
+	 逻辑设备
+	  RAID，LVM2
+	  
+	 
+	
+    DM:LVM2 
+	快照
+	多路径
+	
+	pv：pvcreate，pvremove，pvscan，pvdisplay，pvmove
+	
+	vg：vgcreate,vgremove,vgextend,vgreduce,vgs
+	
+	lv：lvcreate,lvremove 
+	
+	
+	vgcreate VG_NAME /PATH/to/PV 
+	   -s# :PE大小，默认4MB
+	   
+	lvcreate -n LV_NAME -L #G VG_NAME   
+	
+	
+	一，扩展逻辑卷
+	lvexxtend
+	   -L [+]# /PATH/TO/LV
+	   
+	   2G,+3G
+	   5G
+	   lvextend -L 5G /dev/myvg/testlv   扩展物理卷大小
+	
+	 resize2fs
+	    resize2fs -p /PATH/TO/LV
+      
+	  resize2fs -p /dev/myvg/testlv   扩展逻辑
+	
+	
+	二，缩减逻辑卷
+	 注意先卸载再缩减
+	 确保缩减后的空间大小能存元数据
+	 强制检查
+	 df -lh
+	 umount
+	 e2fsck -f1
+	 
+	 resize2fs 
+	   resize2fs /PATH/TO/LV 3G
+	   
+	   lvreduce -L [-] # /PATH/TO/LV
+	
+	重新挂载  
+	
+	
+	三，快照卷
+	生命周期为整个数据时长；在这段时长内，数据的增长量不能超出快照卷大小；
+	2，快照卷应该是只读的；
+	3，跟原卷在同一卷组内；不能
+	
+	
+	
+	lvcreate 
+	   -s
+	   -p r|w
+	    
+	lvcreate -L # -n SLV_NAME -s  -p r /PATH/TO/LV
+	
+	
+	
+	
+	
+	
+ linux：网络属于内核的功能
+	
+	RHEL5：/etc/modprobe.conf
+	alias
+	
+	RHEL6：/etc/udev/rules.d/70-persistent-net.rules
+	
+	
+	
+	
+	
+	ifconfig 【ethx】
+	-a ：显示所有接口配置
+	ifconfig ehtx IP/MASK [UP/DONE]
+   配置的地址立即生效，单重启网络服务或主机，都失效
+   
+   
+   网络服务：
+   RHEL5 : etc/inti.d/network   [start/stop/restart/status]
+   RHEL6: etc/inti.d/NetworkManager  [start/stop/restart/status]
+	
+	
+	网关：route
+	    add：添加
+		  -host：主机路由
+		  -net
+		     -net 0.0.0.0
+	
+	route add -net/-host DEST gw  NEXTHOP
+	route add default gw NEXTHOP
+	
+	
+del ：删除
+  -host
+  -net
+    
+	route del -net 10.0.0.0/8
+	route del -net 0.0.0.0
+	route del default
+	
+	
+	所做出的改动重启网络服务或主机后失效
+	
+	
+	查看
+	route -n ：以数字方式显示个主机或端口登相关信息
+	
+	网络配置文件：
+	/etc/sysconfig/network
+	
+	网络配置文件：
+	/etc/sysconfig/network-scripts/ifcfg-INTERFACE_NAME
+	
+	DEVICE=关联的设备名称，要与文件名的后半部“INTERFACE_NAME”保持一致
+	BOOTPROTO={static|none|dhcp|bootp}：引导协议：要使用静态地址，使用static或none：dhcp表示使用DHCP服务器获取地址：
+	IPADDR=：IP地址
+	NETMSASK=：子网掩码
+	GATEWAY=：设定默认网关
+	ONBOOT=：开机时是否自动激活此网络接口
+	HWADDR=硬件地址，要与硬件中的地址保持一致；可省
+	USERCTL={yes|no}：是否允许普通用户控制此接口
+	PEERDNS{yes|no} ：是否在BOOTPROTO为dhcp时接受由DHCP服务器指定的DNS地址
+	
+	不会立即生效，需重启主机网络服务
+ 	
+	
+	
+	路由：/etc/sysconfig/network-scripts/route-ethx
+	添加格式一：
+	DEST  via    NEXTHOP
+	
+	
+	添加格式二：
+	ADDRESS0=
+	NETMASK0=
+	GATEWAY0=
+	
+	
+	DNS服务器指定方法只有一种
+	/etc/resolv.conf
+	nameserver DNS_IP_1
+	nameserver DNS_IP_2 
+	
+	
+	指定本地解析
+	/etc/hosts
+	主机ip  主机名  主机别名
+	172.16.0.1   www.magedu.com   www
+	
+	
+	DNS-->/etc/hosts-->DNS
+   
+
+   配置主机名：
+   hostname HOSTNAME
+
+立即生效，不是永久有效
+
+/etc/sysconfig/network
+HOSTNAME=
+
+
+
+
+
+
+
+/etc/,/bin,/sbin/,/lib 
+     系统启动就需要用到的程序，这些目录不能挂在额外的分区，必须在跟文件系统的分区上
+	 
+	 
+	 
+	 /usr/
+	 bin
+	 sbin
+	 lib
+	 
+	 操作系统核心功能，可以单独分区
+
+
+/usr/local 
+  bin
+  sbin
+  lib
+  etc
+  man
+  
+    /opt
+	
+	
+	
+	/proc
+	/sys
+         不能单独分区，默认为空
+    
+
+/dev:设备，不能单独分区
+   udev 
+
+
+
+/root:不能单独分区
+ 
+ 
+ /var:建议单独分区
+
+
+/boot:内核，initrd（intiramfs）
+
+POST--》BIOS（HD）--》（MBR）bootloader（文件系统结构，ext2，ext3，xfs）-->内核
+
+
+ 程序：指令+数据
+  
+    指令：芯片
+	 cpu：普通指令，特权指令
+	 指令集
+	 
+	 c语言：
+	 powerpc：二进制格式
+
+
+
+	 软件包管理器的核心功能：
+	 1制作软件包：
+	 2，安装、卸载、升级、查询、校验：
+	 
+	 
+	 RHEDHAT，SUSE ，Debian
+	 
+	 
+	 Redhat，SUSE：RPM
+	     Redhat Package Manager
+		 RPM is Package Manager
+	 
+	 Debian：dpt
+	 
+	 
+	 依赖关系：
+	 
+	 x-->y-->z
+	 
+	 
+	 前端工具：yum、apt-get
+	 后端工具：RPM、dpt
+	 
+	 
+	 yum：YEllowdog
+	 
+	 
+	 
+	 
+rpm：
+1、安装
+rpm -i  /path/topackage_file
+ -h:以#显示进度：每个#表示2%
+ -v ：显示详细过程
+ -vv：更详细
+ 
+	 rpm  -ivh /PATH/TO/PACKAGE_FILE
+	 
+	  --nodeps：忽略依赖关系；
+	  --replacepkgs：重新安装，替换原有
+	  --force：强制安装，可以实现重装或降级
+	 
+	 
+	 2、查询
+	 
+	 rpm -q PACKAGE_NAME:查询指定的包是否已经安装
+	 rpm -qa ：查询已安装所有包
+	 
+	  rpm -qi PACKAGE_NAME:查询指定包的说明信息
+	  rpm -ql PACKAGE_NAME:查询指定包安装后生成的文件列表
+	  rpm -qc PACKAGE_NAME:查询指定包安装的配置文件：
+	  rpm -qd PACKAGE_NAME:查询指定包安装的帮助文件；
+	  
+	 rpm -q --scripts PACKAGE_NAME:查询指定包中包含的脚本
+	 
+	 
+	  rpm -qf /PATH/TO/somefile :查询指定的文件是由哪个rpm包安装生成的
+	 
+	 如果某rpm包尚未安装，我们需查询其说明信息、安装以后会生成的文件；
+	 rpm -qpi /PATH/TO/PACKAGE_FILE
+	 rpm -qpl
+	 
+	 
+	 
+	 3、升级
+	 
+	 rpm -Uvh /PATH/TO/NEW_PACKAGE_FILE:如果有老版本，则升级，否则安装
+	 rpm -Fvh /PATH/TO/NEW_PACKAGE_FILE:如果有老版本，则升级，退出
+	      --oldpackage：降级
+		  
+		  
+	4、卸载
+	rpm  -e PACKAGE_NAME
+	    --nodeps 
+		
+	 
+	 5、校验
+	  rpm -V PACKAGE_NAME
+	  
+	  
+	   6、重建数据库
+	   rpm 
+	      --rebuilddb：重建数据库
+		  --initdb：初始化数据库，没有才建立，有就不用建立
+		  
+	 
+	 7、检验来源合法性，及软件包完整性：
+	 加密类型：
+	    对称：加密啊解密使用同一个密钥
+		公钥加密：每个密码都是成对出现，一个为私钥，一个为公钥，公钥隐含与私钥中，可以提取出来开，兵公开
+		
+	 
+	    单向：
+
+   ls  /etc/pki/rpm-gpg/
+      RPM-GPG-KEY-redhat-release   
+	 
+	 rpm -K /PATH/TO/PACKAGE_FILE
+	 dsa,gpg:验证来源合法性，也即验证前面：可以使用--nosignature，略过此项
+	 sha1，md5：验证软件包完整性：可以用--nodigest，略过
+	 
+	 rpm --import  /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release:导入密钥文件
+	
+	
+	
+	
+	
+	yum仓库中的元数据文件：
+	primary.xml.gz
+         所有RPM包的列表
+		 依赖关系：
+		 每个RPM安装生成的文件列表
+		  
+	filelists.xml.gz
+	    当前仓库中所有RPM包的所有文件列表：
+		
+	other.xml.gz
+	   额外信息，RPM包的修改日志
+	   
+	   repomd.xml
+	    记录的是上面三个文件的时间戳和校验和：
+		
+		
+		yum install zsh
+         		 
+	
+	ftp：//172.16.0.1/pub/{Server,VT,Cluster,ClusterStrage}
+	
+	
+	如何为yum定义repo文件
+	
+	[Repo_ID]
+     name=Description
+     baseurl=	 
+	
+	
+	
+	
+	
+	
+	
+	

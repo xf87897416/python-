@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <!--<script src="test.js">-->
+
+</head>
+
+<body>
+    <input type="text" id="clock" style="width: 250px">
+    <input type="button" value="begin" onclick="begin_click()">
+    <input type="button" value="END" onclick="end()">
+
+
+    <script>
+//        var a=1;
+//        var s="hello";
+//
+//        alert(a)
+//        alert(s)
+//        console.log(a);
+//        console.log(s);
+//    alert(parseFloat())
+//    var i=10;
+//    var s="hello";
+//    var b=false;
+//    var u=undefined;
+//    var n=null;
+//    var obj= new Object();
+//
+//    console.log(typeof(i));
+//    console.log(typeof(s));
+//    console.log(typeof(b));
+//    console.log(typeof(u));
+//    console.log(typeof(n));
+//    console.log(typeof(obj));
+//    var x=1;
+//        alert(x++);  1
+//        alert(x++);  2
+//        alert(--x);  2
+//        alert(x--);  2
+//        if(3<"25"){
+//            alert("true")
+//        }
+//    var add=new Function("a","b","alert(a+b)");
+//    add(1,22);
+//
+//    alert(add.length);
+
+
+//function a(a,b){
+//    alert(a+b)
+//}
+//var a=1
+//var b=2
+//a(a,b)
+
+//        var arr2= new Array(5);
+//        console.log(arr2.length);
+//        console.log(arr2[1]);
+//        console.log(arr2[2]);
+
+//    var date_obj=new Date();
+//    alert(date_obj.toLocaleString());
+//    var date_obj2=new Date("2016/3/14 15:30");
+//    alert(date_obj2.toLocaleString());
+
+//   var date_obj=new Date();
+//    console.log(date_obj.toLocaleString());
+//    console.log(date_obj.toString());
+//    console.log(date_obj.getFullYear());
+//    console.log(date_obj.getMonth());
+//    console.log(date_obj.getDate());
+//    console.log(date_obj.getDay());
+//    console.log(date_obj.getHours());
+//    console.log(date_obj.getMinutes());
+//    console.log(date_obj.getSeconds());
+//    console.log(date_obj.getHourMinuteSecond);
+//    console.log(date_obj.getMilliseconds());
+
+
+
+  //  年 月 日 小时 分钟 秒
+
+//alert(Math.random())
+//alert(Math.pow(2,3))
+function getTime() {
+    var date_obj=new Date();
+    year=date_obj.getFullYear();
+    month=date_obj.getMonth();
+    day=date_obj.getDate();
+    hours=date_obj.getHours();
+    minutes=date_obj.getMinutes();
+    second=date_obj.getSeconds();
+    week=date_obj.getDay();
+    return year+"年"+month+"月"+f(day)+"日"+hours+":"+minutes+":"+second+" "+num_week(week)
+}
+
+function f(num) {
+    if (num<10){
+        return "0"+num;
+    }
+    return num;
+}
+
+function num_week(n){
+        week=["星期日","星一","星期二","星期三","星期四","星期五","星期六"]
+        return week[n]
+    }
+
+function begin() {
+    var stime=getTime();
+    var ret=document.getElementById("clock")
+    ret.value=stime;
+}
+
+var ID;
+function begin_click() {
+    if (ID==undefined){
+        begin();
+        ID=setInterval(begin,1000);
+    }
+}
+
+function end() {
+    clearInterval(ID);
+    ID=undefined;
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>

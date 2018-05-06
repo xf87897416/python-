@@ -1,0 +1,70 @@
+
+博客参考：
+
+    Model操作：http://www.cnblogs.com/wupeiqi/articles/6216618.html
+     Form操作：http://www.cnblogs.com/wupeiqi/articles/6144178.html
+ModelForm操作：http://www.cnblogs.com/wupeiqi/articles/6229414.html
+
+Model 强大的数据库操作，弱小的数据验证
+    a. 表
+        一对多：
+            to
+            to_fields
+            related_name
+            related_query_name
+            on_delete
+            limit_choices_to 
+            ...
+        ...
+        
+    b. 操作
+        create
+        。。。
+        
+    c. 验证
+        full_clean    ->  字段正则判定  -->  clean方法（钩子）
+    
+Form  强大的数据验证
+       
+       is_valid()  ->  full_clean()  ->  
+                                     -> 每个字段的正则，每个字段的放啊 clean_字段名()
+                                     
+                                     -> _clean_form  -> clean(钩子)
+                                     -> _post_clean(钩子)
+                                     
+                                     
+        ===》
+            返回值is_valid()
+            cleaned_data
+            errors
+            
+            
+        ==》 实时显示新插入的数据
+
+
+ModelForm 强大的数据验证，适中的数据库操作
+
+    Form:
+                                   UserForm -> Form -> BaseForm
+        
+    ModelForm:
+        UserModelForm -> ModelForm -> BaseModelForm -> BaseForm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>123</title>
+    <style>
+        .content{
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            height: 45px;
+            width: 40px;
+            background-color: #c0bbb5;
+        }
+        .content:hover{
+            border: 1px solid red;
+        }
+        .hide{
+            display: none;
+        }
+
+        .content #inner{
+            background-color: #eafffc;
+            opacity: 0.7;
+            height: 45px;
+            width: 40px;
+            z-index: 20;
+            display: none;
+        }
+        .content:hover #inner{
+            display: block;
+            z-index: 10;
+        }
+        .content:hover a{
+            display: none;
+        }
+        .content:hover #text{
+            display: block;
+            z-index: 10;
+            left:0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="text">
+        <a>返回顶部</a>
+        <div id="inner"></div>
+        <div id="text" class="hide">你好</div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

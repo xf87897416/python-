@@ -1,0 +1,54 @@
+{% load xx %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .filter a{
+            display: inline-block;
+            margin: 5px;
+            padding: 3px 5px;
+        }
+        .filter a.active{
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>筛选条件</h1>
+    <div class="filter">
+        <div>
+            <a>全部</a>
+            {% for item in direction_list %}
+                <a>{{ item.name }}</a>
+            {% endfor %}
+        </div>
+        <div>
+            {% total_tag arg_dict "cg_id" %}
+            {% for item in category_list %}
+                {% category_tag item arg_dict %}
+            {% endfor %}
+        </div>
+        <div>
+            {% total_tag arg_dict "lv_id" %}
+            {% for item in level_list %}
+                {% level_tag item arg_dict %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <h1>查询结果</h1>
+    <div class="content">
+        {% for row in result %}
+            <div style="width: 100px;height: 260px;float: left;">
+                <img style="width: 100px;height: 150px;" src="{{ row.img }}">
+                <p>{{ row.title }}</p>
+                <p>{{ row.summary }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

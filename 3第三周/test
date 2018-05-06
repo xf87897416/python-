@@ -1,0 +1,13 @@
+
+
+import random
+
+
+num=""
+for i in range(6):
+    a=random.choice('1234567890abcdefghijklmnopqrstuvwxyz')
+    num+=a
+
+print(num)
+
+

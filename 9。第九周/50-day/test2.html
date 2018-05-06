@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>123</title>
+</head>
+<body>
+
+
+<script>
+//var jsonStr = '[{"id":"01","open":false,"pId":"0","name":"A部门"},{"id":"01","open":false,"pId":"0","name":"A部门"},{"id":"011","open":false,"pId":"01","name":"A部门"},{"id":"03","open":false,"pId":"0","name":"A部门"},{"id":"04","open":false,"pId":"0","name":"A部门"}, {"id":"05","open":false,"pId":"0","name":"A部门"}, {"id":"06","open":false,"pId":"0","name":"A部门"}]';
+//var jsonObj = JSON.parse(jsonStr);//转换为json对象
+//for(var i=0;i<jsonObj.length;i++){
+//    alert(jsonObj[i].id); //取json中的值
+//}
+//console.log(jsonObj)
+//var jsonStr1 = JSON.stringify(jsonObj)
+//console.log(jsonStr1+"jsonStr1")
+
+    var name="The window";
+    var object={
+        name:"My Object",
+
+        getNameFunc : function(){
+            var that=this;
+            return function () {
+                return that.name;
+            };
+        }
+    }
+    alert(object.getNameFunc()());
+
+//My Object
+
+
+</script>
+
+</body>
+</html>

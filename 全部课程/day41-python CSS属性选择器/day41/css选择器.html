@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            font-size: 45px;
+         }
+
+        p{
+            background-color: yellow;
+        }
+        div{
+            color: darkgreen;
+        }
+
+        #p1{
+            font-style: italic;
+        }
+
+        .c1{
+            background-color: paleturquoise;
+        }
+
+       #outer .c2 .c1{
+           font-size: 50px;
+       }
+        #outer{
+            color: red;
+        }
+        #outer>.c1>.c3{
+           font-size: 50px;
+       }
+       #p,#p1,.c6{
+           color: saddlebrown;
+       }
+       #outer+.t{color: red}
+    </style>
+</head>
+<body>
+
+<p id="p"> hello p </p>
+
+<div id="outer"> hello div
+    <span>hello span</span>
+    <p id="p1"> p2.... </p>
+    <p class="c1">p3......</p>
+
+    <div class="c1">
+        <p class="c3">p4......</p>
+    </div>
+</div>
+
+<p>ppp</p>
+<p class="t">pppppp</p>
+
+<div class="c6">div3</div>
+
+</body>
+</html>

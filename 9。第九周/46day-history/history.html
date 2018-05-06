@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="前进" onclick="func1();">
+    <a href="history2.html">lesson2</a>
+
+    <input type="button" value="重载" onclick="location.reload()">
+    <input type="button" value="转" onclick="location.href='http://www.baidu.com'">
+
+<script>
+    function func1() {
+//         history.forward();
+        history.go(1);
+        alert(history.length);
+    }
+
+
+</script>
+</body>
+</html>

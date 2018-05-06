@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/mf/" method="POST">
+        {{ obj.as_p }}
+        {% if request.session.is_login %}
+            <script>alert('已成功添加')</script>
+        {% endif %}
+{#        name:{{ obj.name }}#}
+
+        <input type="submit" value="提交"/>
+    </form>
+<script src="/static/jquery-3.1.1.js"></script>
+<script>
+
+</script>
+</body>
+</html>

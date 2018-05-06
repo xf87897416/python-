@@ -1,0 +1,75 @@
+{% load xx %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            width: 900px;
+            margin: 0 auto;
+        }
+        .container .item{
+            width: 300px;
+            float: left;
+        }
+        .container .item img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+{#    <div class="container">#}
+{#        {% for row in user_list %}#}
+{#        <div class="item">#}
+{#            <img src="{{ row.src }}">#}
+{#            <p>{{ row.name }}</p>#}
+{#            <p>{{ row.summary }}</p>#}
+{#        </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#    <hr>#}
+    <div style="width: 900px;margin: 0 auto">
+        <div style="width: 300px;float: left">
+            {% for row in user_list %}
+
+                {% if forloop.counter|test:"3,1" %}
+                    <div>
+                        <img style="width: 300px;height: 200px;" src="{{ row.src }}">
+                        <p>{{ row.name }} => {{ forloop.counter }}</p>
+                        <p>{{ row.summary }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+
+        </div>
+        <div style="width: 300px;float: left">
+            {% for row in user_list %}
+                {% if forloop.counter|test:"3,2" %}
+                    <div>
+                        <img style="width: 300px;height: 200px;" src="{{ row.src }}">
+                        <p>{{ row.name }} => {{ forloop.counter }}</p>
+                        <p>{{ row.summary }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+        <div style="width: 300px;float: left">
+            {% for row in user_list %}
+                {% if forloop.counter|test:"3,0" %}
+                    <div>
+                        <img style="width: 300px;height: 200px;" src="{{ row.src }}">
+                        <p>{{ row.name }} => {{ forloop.counter }}</p>
+                        <p>{{ row.summary }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+</body>
+</html>

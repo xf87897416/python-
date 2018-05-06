@@ -1,0 +1,60 @@
+{% load xx %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .filter a{
+            display: inline-block;
+            margin: 5px;
+            padding: 3px 5px;
+        }
+        .filter a.active{
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>筛选条件</h1>
+    <div class="filter">
+        <div>
+            {% total_tag_2 arg_dict 'dr_id' %}
+            {% for item in drection_list %}
+                <!-- if判断，如果kwargs.dr_id = item.id
+                    - 加入样式
+                else:
+                    - 无样式
+                   -->
+                {% dr_tag item arg_dict %}
+            {% endfor %}
+
+        </div>
+        <div>
+            {% total_tag_2 arg_dict 'cg_id' %}
+            {% for item in category_list %}
+                {% cg_tag item arg_dict %}
+            {% endfor %}
+        </div>
+        <div>
+            {% total_tag_2 arg_dict 'lv_id' %}
+            {% for item in level_list %}
+                {% lv_tag item arg_dict %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <h1>查询结果</h1>
+    <div class="content">
+        {% for row in result %}
+            <div style="width: 100px;height: 260px;float: left;">
+                <img style="width: 100px;height: 150px;" src="{{ row.img }}">
+                <p>{{ row.title }}</p>
+                <p>{{ row.summary }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

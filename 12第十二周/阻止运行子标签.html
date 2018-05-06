@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+<body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+  $("span").click(function(event){
+    event.stopPropagation();
+
+    alert("The span element was clicked.");
+    event.preventDefault();
+  });
+  $("p").click(function(event){
+    alert("The p element was clicked.");
+  });
+  $("div").click(function(){
+    alert("The div element was clicked.");
+  });
+});
+</script>
+
+    <div>this is div</div>
+    <hr>
+
+    <span>this is span</span>
+    <hr>
+
+    <p>this is p</p>
+    <hr>
+    <p>
+        <span>the span in p </span>
+    </p>
+
+
+
+
+</body>
+</html>

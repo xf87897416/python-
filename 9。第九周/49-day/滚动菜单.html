@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>123</title>
+    <script src="../50-day/jquery-3.1.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+        }
+        #top{
+            height: 48px;
+            background-color: #303a40;
+        }
+        .left{
+            position: absolute;
+            left: 200px;
+            top: 48px;
+            bottom: 0;
+            width: 220px;
+            border: 1px solid red;
+        }
+        #right{
+            position: absolute;
+            left: 422px;
+            right: 200px;
+            top: 48px;
+            bottom: 0;
+            border: 1px solid gray;
+            height: auto;
+        }
+        /*#inner{*/
+            /*overflow: scroll;*/
+            /*height: 100px;*/
+        /*}*/
+        .fafa{
+            position: fixed;
+            left: 200px;
+            top: 0;
+        }
+        .left a{
+            display: block;
+            text-align: center;
+        }
+        .active{
+            background-color: #000000;
+            color:white;
+            opacity: 0.5;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div id="top"></div>
+<div class="left">
+    <a b="1">菜单一</a>
+    <a b="2">菜单二</a>
+    <a b="3">菜单三</a>
+    <a b="4">菜单四</a>
+</div>
+<div id="right">
+    <div a="1" style="height: 500px; background-color: #C0C0C0"></div>
+    <div a="2" style="height: 800px; background-color: #cc3399"></div>
+    <div a="3" style="height: 1000px; background-color: green"></div>
+    <div a="4" style="height: 50px; background-color: blue ; opacity: 0.5"></div>
+<div onclick="GoTop()" style="cursor: pointer;    position: fixed ; right: 0 ;bottom: 0;width: 50px;height: 50px;background-color: #78f23b"  >返回顶部</div>
+
+</div>
+
+<script>
+    function GoTop() {
+        $(window).scrollTop(0);
+    }
+
+    window.onscroll= function () {
+        var scroolTop= $(window).scrollTop();
+//
+        if(scroolTop>48){
+            $('.left').addClass('fafa')
+        }else{
+            $('.left').removeClass('fafa');
+            $('.left a').removeClass('active');
+        }
+
+
+
+        $("#right").children().each(function () {
+        var eleTop=$(this).offset().top;
+        var wintop=eleTop - scroolTop;
+        var winbuttonTop=eleTop+$(this).height() - scroolTop;
+
+        var docHeight = $(document).height();
+        var winHeight = $(window).height();
+        console.log(Math.round(docHeight-winHeight));
+        console.log(Math.round(scroolTop));
+
+        if(Math.round(docHeight-winHeight) == Math.round(scroolTop)) {
+            $('.left a:last').addClass('active').siblings().removeClass('active');
+        }else{
+            if (wintop<=0 && winbuttonTop>0){
+            var a = $(this).attr('a');
+            $('.left a[b="'+a+'"]').addClass('active').siblings().removeClass('active');
+            return;
+        }
+        }
+    })
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding:0;
+}
+    #content{
+        position: relative;
+        background-color: #006000;
+    }
+    .box{
+        padding: 5px;
+        float: left;
+    }
+    .box_img{
+        padding: 5px;
+        border: 1px solid #cccccc;
+        box-shadow: 0 0 5px #cccccc;
+        border-radius: 5px;
+    }
+    img{
+        width: 150px;
+        height: auto;
+    }
+
+
+</style>
+<body>
+    <script>
+        /**
+ * Created by asua on 2016/4/9.
+ */
+window.onload=function(){
+    imgLocation("content","box");
+    var lodeImage={"Date":[{"src":"1.jpg"},{"src":"2.jpg"},{"src":"3.jpg"},{"src":"4.jpg"},{"src":"5.jpg"},{"src":"6.jpg"},{"src":"7.jpg"},{"src":"8.jpg"},{"src":"9.jpg"},{"src":"10.jpg"},]}
+    window.onscroll=function(){
+        if(checkFlag()){
+            for(var i=0;i<lodeImage.Date.length;i++){
+                var box=document.createElement("div");
+                box.className="box";
+                var cparent=document.getElementById("content");
+                cparent.appendChild(box);
+                var box_img=document.createElement("div");
+                box_img.className="box_img";
+                box.appendChild(box_img);
+                var img=document.createElement("img");
+                img.src="Img/"+lodeImage.Date[i].src;
+                box_img.appendChild(img);
+            }
+            imgLocation("content","box");
+        }
+    }
+}
+function checkFlag(){
+    var cparent=document.getElementById("content");
+    var ccontent=getChildElement(cparent,"box");
+    var lastContentHeight=ccontent[ccontent.length-1].offsetTop;
+    var scrollHeight=document.documentElement.scrollTop||document.body.scrollTop;
+    var pageHeight=document.documentElement.clientHeight||document.body.clientHeight;
+    console.log(lastContentHeight+":"+scrollHeight+":"+pageHeight);
+    if(lastContentHeight<scrollHeight+pageHeight){
+        return true;
+    }
+}
+function imgLocation(parent,child){  //"content","box"
+    var cparent=document.getElementById(parent);
+    var ccontent=getChildElement(cparent,child); //盒子
+    var imgwidth=ccontent[0].offsetWidth;  //获取图片的宽
+    var cols=Math.floor(document.documentElement.clientWidth/imgwidth); //向下取整 900/150 得到列数
+    console.log(cols,'cols');
+    console.log(imgwidth,'imgwidth');
+    console.log(document.documentElement.clientWidth,'document.documentElement.clientWidth');
+    cparent.style.cssText="width:"+imgwidth*cols+"px;margin:30px auto";
+    var heightArr=[];
+    for(var i=0;i<ccontent.length;i++){
+        if(i<cols){
+            heightArr.push(ccontent[i].offsetHeight);
+        }else{
+            var minHeight=Math.min.apply(null,heightArr);
+            var minIndex=getMinIndex(heightArr,minHeight);
+            ccontent[i].style.position="absolute";
+            ccontent[i].style.top=minHeight+"px";
+            ccontent[i].style.left=ccontent[minIndex].offsetLeft+"px";
+            heightArr[minIndex]+=ccontent[i].offsetHeight;
+        }
+    }
+}
+function getMinIndex(heightArr,minHeight){
+    for(var i=0;i<heightArr.length;i++){
+        if(heightArr[i]==minHeight){
+            return i;
+        }
+    }
+}
+function getChildElement(parent,content){
+    var contentArr=[];
+    var allcontent=parent.getElementsByTagName("*");
+    for(var i=0;i<allcontent.length;i++){
+        if(allcontent[i].className==content){
+            contentArr.push(allcontent[i]);
+        }
+    }
+    return contentArr;
+}
+
+    </script>
+    <div id="content">
+        <div class="box">
+            <div class="box_img">
+                <img src="1.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="2.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="3.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="4.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="5.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="6.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="7.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="8.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="9.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="10.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="6.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="7.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="8.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="9.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="10.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="4.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="5.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="6.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="7.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="8.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="9.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="10.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="2.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="3.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="4.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="5.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="6.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="7.jpg">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="8.jpg">
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

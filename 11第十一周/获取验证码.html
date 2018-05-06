@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <style>
+        .yan{
+            background-color: rgb(51, 102, 153);
+            height: 50px;
+            width: 70px;
+            color: white;
+            line-height: 50px;
+            padding: 0 5px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10%;
+            ;
+        }
+        .sending{
+            cursor: not-allowed;
+            background-color: #c0cddf;!important;
+        }
+    </style>
+</head>
+<body>
+<a class="yan" href="javascript:void(0);">获取验证码</a>
+
+<script src="../12第十二周/jquery-3.2.1.js"></script>
+<script>
+    $(function () {
+        bindyan();
+    });
+    function bindyan() {
+       $(".yan").click(function () {
+           if($(this).hasClass('sending')){
+                    // 遇到return下面不再继续执行
+                        return;
+                      }
+           var time=10;
+           var ths=$(this);
+           ths.addClass('sending');
+           ths.text("已发送(" + time + ")");
+           time -= 1;
+           var run=setInterval(function test() {
+               ths.text("已发送(" + time + ")");
+               time -= 1;
+               if (time < 0) {
+                   clearInterval(run);
+                   ths.removeClass('sending');
+                   ths.text("获取验证码");
+               }
+           },1000);
+
+            })
+    }
+
+
+
+
+
+
+    
+
+
+</script>
+</body>
+</html>
