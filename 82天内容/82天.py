@@ -27,21 +27,38 @@ bitcount LOGIN_USER
 查看用户在不在
 getbit LOGIN_USER 用户唯一id
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+http://www.cnblogs.com/alex3714/articles/5248247.html
+rabbitmq
 
 '''
+import redis
+
+pool= redis.ConnectionPool(host='192.168.0.90',port=6379,password='123',db=1)
+# r.set('foo','Bar')
+r=redis.Redis(connection_pool=pool)
+
+pipe = r.pipeline(transaction=True) #事务，原子性操作
+pipe.set('name','xf')
+pipe.set('age','18')
+
+pipe.execute()
+
+print(r.get('home'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
