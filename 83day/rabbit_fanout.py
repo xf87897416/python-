@@ -3,7 +3,7 @@
 
 import pika
 import sys
-
+'''广播'''
 credentials = pika.PlainCredentials("alex","alex3714")
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -20,3 +20,6 @@ channel.basic_publish(exchange='logs',
                       body=message)
 print(" [x] Sent %r" % message)
 connection.close()
+
+
+

@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b589db8-aecf-4789-9017-58c73c4e3c53" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/82天内容/rabbit_receive.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/82天内容/rabbit_receive_worker.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/82天内容/rabbit_send.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/82天内容/rabbit_send_worker.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/82天内容/发布.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/82天内容/爬虫.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/82天内容/订阅.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/83day/rabbit_fanout.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/83day/rabbit_fanout_recv.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/83day/rabbit_direct_recv.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/83day/rabbit_direct_send.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/83day/rabbit_topic_recv.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/83day/rabbit_topic_send.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/83day/test.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/82天内容/82天.py" afterPath="$PROJECT_DIR$/82天内容/82天.py" />
+      <change beforePath="$PROJECT_DIR$/12第十二周/test2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/12第十二周/项目crm/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/83day/rabbit_fanout.py" afterPath="$PROJECT_DIR$/83day/rabbit_fanout.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +24,7 @@
     <SUITE FILE_PATH="coverage/python$server3.coverage" NAME="server3 Coverage Results" MODIFIED="1512811125425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10第十周/51-dayweb框架" />
     <SUITE FILE_PATH="coverage/python$31_day.coverage" NAME="31.day。进程 Coverage Results" MODIFIED="1510713972747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6第六周" />
     <SUITE FILE_PATH="coverage/python$tryserver.coverage" NAME="tryserver Coverage Results" MODIFIED="1510651743486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python$rabbit_fanout.coverage" NAME="rabbit_fanout Coverage Results" MODIFIED="1526800768847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/83day" />
+    <SUITE FILE_PATH="coverage/python$rabbit_fanout.coverage" NAME="rabbit_fanout Coverage Results" MODIFIED="1526818553788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/83day" />
     <SUITE FILE_PATH="coverage/python$game.coverage" NAME="game Coverage Results" MODIFIED="1520849478011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/12第十二周" />
     <SUITE FILE_PATH="coverage/python$.coverage" NAME="爬虫 Coverage Results" MODIFIED="1525957112744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/82天内容" />
     <SUITE FILE_PATH="coverage/python$course.coverage" NAME="course Coverage Results" MODIFIED="1510045736732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/选课系统-作业/bin" />
@@ -56,7 +54,7 @@
     <SUITE FILE_PATH="coverage/python$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1510449913152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/自写选课系统/core" />
     <SUITE FILE_PATH="coverage/python$server.coverage" NAME="server Coverage Results" MODIFIED="1510635932276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FTP功能/ftpserver" />
     <SUITE FILE_PATH="coverage/python$settings__1_.coverage" NAME="settings (1) Coverage Results" MODIFIED="1510411685747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/自写选课系统/conf" />
-    <SUITE FILE_PATH="coverage/python$rabbit_fanout_recv.coverage" NAME="rabbit_fanout_recv Coverage Results" MODIFIED="1526800748259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/83day" />
+    <SUITE FILE_PATH="coverage/python$rabbit_fanout_recv.coverage" NAME="rabbit_fanout_recv Coverage Results" MODIFIED="1526818556426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/83day" />
     <SUITE FILE_PATH="coverage/python$36_daypymysql.coverage" NAME="36.day。pymysql Coverage Results" MODIFIED="1511583095000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/7第七周" />
     <SUITE FILE_PATH="coverage/python$start__1_.coverage" NAME="start (1) Coverage Results" MODIFIED="1510490043021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/自写选课系统/bin" />
     <SUITE FILE_PATH="coverage/python$27_day___threading.coverage" NAME="27.day线程---threading模块 Coverage Results" MODIFIED="1510230368498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5第五周" />
@@ -69,7 +67,7 @@
     <SUITE FILE_PATH="coverage/python$31_day_.coverage" NAME="31.day.进程队列 Coverage Results" MODIFIED="1522487650539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6第六周" />
     <SUITE FILE_PATH="coverage/python$rabbit_send_worker.coverage" NAME="rabbit_send_worker Coverage Results" MODIFIED="1526790160635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/82天内容" />
     <SUITE FILE_PATH="coverage/python$rabbit_receive.coverage" NAME="rabbit_receive Coverage Results" MODIFIED="1526740029976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/82天内容" />
-    <SUITE FILE_PATH="coverage/python$test.coverage" NAME="test Coverage Results" MODIFIED="1513927809496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/11第十一周" />
+    <SUITE FILE_PATH="coverage/python$test.coverage" NAME="test Coverage Results" MODIFIED="1527002345422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/83day" />
     <SUITE FILE_PATH="coverage/python$82.coverage" NAME="82天 Coverage Results" MODIFIED="1526738468447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/82天内容" />
     <SUITE FILE_PATH="coverage/python$client.coverage" NAME="client Coverage Results" MODIFIED="1510635954882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FTP功能/ftpclient" />
     <SUITE FILE_PATH="coverage/python$program__1_.coverage" NAME="program (1) Coverage Results" MODIFIED="1510637467787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FTP作业讲解全部文件/EasyServerFTP/bin" />
@@ -125,7 +123,7 @@
     <SUITE FILE_PATH="coverage/python$62_form.coverage" NAME="62-form Coverage Results" MODIFIED="1514977268053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/11第十一周" />
     <SUITE FILE_PATH="coverage/python$26_daycmd.coverage" NAME="26.day。cmd Coverage Results" MODIFIED="1510197803242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5第五周" />
     <SUITE FILE_PATH="coverage/python$2_.coverage" NAME="2.格式化输出 Coverage Results" MODIFIED="1508507807719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第一周" />
-    <SUITE FILE_PATH="coverage/python$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1517917171065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/12第十二周" />
+    <SUITE FILE_PATH="coverage/python$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1527001896294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/12第十二周" />
     <SUITE FILE_PATH="coverage/python$16_day.coverage" NAME="16.day。装饰器 Coverage Results" MODIFIED="1517910211554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3第三周" />
     <SUITE FILE_PATH="coverage/python$list_lesson.coverage" NAME="list_lesson Coverage Results" MODIFIED="1508485065036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/python安装目录3.6/day05-python 全栈开发-基础篇/day05课上笔记和代码/day05课上笔记和代码" />
   </component>
@@ -195,21 +193,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rabbit_fanout.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/83day/rabbit_fanout.py">
+      <file leaf-file-name="rabbit_topic_recv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/83day/rabbit_topic_recv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rabbit_fanout_recv.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/83day/rabbit_fanout_recv.py">
+      <file leaf-file-name="rabbit_direct_recv.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/83day/rabbit_direct_recv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="-114">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rabbit_topic_send.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/83day/rabbit_topic_send.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -273,10 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/11第十一周/62-day-抽屉项目.py" />
-        <option value="$PROJECT_DIR$/11第十一周/抽屉/index.html" />
-        <option value="$PROJECT_DIR$/8第八周/作业/42.day。作业.html" />
-        <option value="$PROJECT_DIR$/11第十一周/test2.html" />
         <option value="$PROJECT_DIR$/11第十一周/62-form.py" />
         <option value="$PROJECT_DIR$/11第十一周/65-chouti.py" />
         <option value="$PROJECT_DIR$/11第十一周/65-chouti/zan.html" />
@@ -296,7 +300,6 @@
         <option value="$PROJECT_DIR$/12第十二周/项目crm/__init__.py" />
         <option value="$PROJECT_DIR$/3第三周/18.day.config和re模块.py" />
         <option value="$PROJECT_DIR$/4第四周/25.day。类成员，高级.py" />
-        <option value="$PROJECT_DIR$/12第十二周/test2.py" />
         <option value="$PROJECT_DIR$/12第十二周/test3分批加载.py" />
         <option value="$PROJECT_DIR$/12第十二周/test.html" />
         <option value="$PROJECT_DIR$/12第十二周/ajax.html" />
@@ -320,10 +323,15 @@
         <option value="$PROJECT_DIR$/82天内容/rabbit_receive.py" />
         <option value="$PROJECT_DIR$/82天内容/82天.py" />
         <option value="$PROJECT_DIR$/82天内容/rabbit_send_worker.py" />
-        <option value="$PROJECT_DIR$/83day/test.py" />
         <option value="$PROJECT_DIR$/82天内容/rabbit_receive_worker.py" />
         <option value="$PROJECT_DIR$/83day/rabbit_fanout_recv.py" />
+        <option value="$PROJECT_DIR$/83day/rabbit_direct_send.py" />
+        <option value="$PROJECT_DIR$/83day/rabbit_direct_recv.py" />
         <option value="$PROJECT_DIR$/83day/rabbit_fanout.py" />
+        <option value="$PROJECT_DIR$/12第十二周/test2.py" />
+        <option value="$PROJECT_DIR$/83day/test.py" />
+        <option value="$PROJECT_DIR$/83day/rabbit_topic_recv.py" />
+        <option value="$PROJECT_DIR$/83day/rabbit_topic_send.py" />
       </list>
     </option>
   </component>
@@ -333,9 +341,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="567" />
-    <option name="width" value="1091" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="199" />
+    <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -375,6 +383,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -392,7 +401,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,19 +413,19 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\python项目列表\82天内容" />
-      <recent name="E:\python项目列表\新项目企业官网" />
-      <recent name="E:\python项目列表\新项目企业官网\feiji" />
-      <recent name="E:\python项目列表\12第十二周" />
-      <recent name="E:\mysite\statics" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\python项目列表\83day" />
       <recent name="E:\python项目列表\82天内容" />
       <recent name="E:\python项目列表\新项目企业官网" />
       <recent name="E:\python项目列表\新项目企业官网\feiji" />
       <recent name="E:\python项目列表\新项目企业官网\waterfall" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\python项目列表\83day" />
+      <recent name="E:\python项目列表\82天内容" />
+      <recent name="E:\python项目列表\新项目企业官网" />
+      <recent name="E:\python项目列表\新项目企业官网\feiji" />
+      <recent name="E:\python项目列表\12第十二周" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -432,27 +440,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.rabbit_fanout">
+  <component name="RunManager" selected="Python.test">
     <configuration name="test2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/python项目列表/9。第九周/50-day/test2.html" />
-    <configuration name="爬虫" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/82天内容" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python项目列表" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/82天内容/爬虫.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="rabbit_fanout" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -510,25 +499,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="rabbit_send" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/82天内容" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python项目列表" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/82天内容/rabbit_send.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="rabbit_send_worker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -543,6 +513,44 @@
       <module name="python项目列表" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/82天内容/rabbit_send_worker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/83day" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python项目列表" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/83day/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/12第十二周" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python项目列表" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/12第十二周/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -619,19 +627,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test2.html" />
       <item index="1" class="java.lang.String" itemvalue="Django server.mysite" />
-      <item index="2" class="java.lang.String" itemvalue="Python.rabbit_send" />
-      <item index="3" class="java.lang.String" itemvalue="Python.rabbit_receive_worker" />
-      <item index="4" class="java.lang.String" itemvalue="Python.rabbit_send_worker" />
-      <item index="5" class="java.lang.String" itemvalue="Python.rabbit_fanout" />
-      <item index="6" class="java.lang.String" itemvalue="Python.rabbit_fanout_recv" />
+      <item index="2" class="java.lang.String" itemvalue="Python.rabbit_receive_worker" />
+      <item index="3" class="java.lang.String" itemvalue="Python.rabbit_send_worker" />
+      <item index="4" class="java.lang.String" itemvalue="Python.rabbit_fanout_recv" />
+      <item index="5" class="java.lang.String" itemvalue="Python.test2" />
+      <item index="6" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.rabbit_fanout" />
-        <item index="1" class="java.lang.String" itemvalue="Python.rabbit_fanout_recv" />
-        <item index="2" class="java.lang.String" itemvalue="Python.rabbit_send_worker" />
-        <item index="3" class="java.lang.String" itemvalue="Python.rabbit_receive_worker" />
-        <item index="4" class="java.lang.String" itemvalue="Python.rabbit_send" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.rabbit_fanout_recv" />
+        <item index="3" class="java.lang.String" itemvalue="Python.rabbit_send_worker" />
+        <item index="4" class="java.lang.String" itemvalue="Python.rabbit_receive_worker" />
       </list>
     </recent_temporary>
   </component>
@@ -661,19 +669,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="567" y="0" width="1091" height="1040" extended-state="1" />
+    <frame x="199" y="0" width="960" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32466063" sideWeight="0.4954023" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24777777" sideWeight="0.5519412" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249428" sideWeight="0.49080458" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32466063" sideWeight="0.49080458" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35067874" sideWeight="0.44805875" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19457014" sideWeight="0.4449108" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22502425" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19457014" sideWeight="0.4449108" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26222223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2488889" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31464532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24807692" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -683,9 +690,33 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31464532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793522" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32466063" sideWeight="0.4954023" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24777777" sideWeight="0.5519412" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249428" sideWeight="0.49080458" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35067874" sideWeight="0.44805875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19457014" sideWeight="0.4449108" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26222223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2488889" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31464532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24807692" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38444445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793522" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -720,62 +751,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/6第六周/32.day。yield携程.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5第五周/27.day线程---threading模块.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5第五周/29.day。队列.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5第五周/27.day.socketserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3第三周/17.day. 伪并发yield.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5第五周/26.day网络编程.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="77" column="3" lean-forward="true" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4第四周/test.txt.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6第六周/34.day。select_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/6第六周/33.day.子网划分.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1008,53 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/83day/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/82天内容/rabbit_receive.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/82天内容/rabbit_send.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/82天内容/82天.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/82天内容/rabbit_receive_worker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/82天内容/rabbit_send_worker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding>
-            <element signature="e#45#56#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,18 +998,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/83day/rabbit_fanout_recv.py">
+    <entry file="file://$PROJECT_DIR$/82天内容/rabbit_send.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="414">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/82天内容/rabbit_send_worker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/82天内容/rabbit_receive_worker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/82天内容/82天.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-437">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/83day/rabbit_fanout.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/83day/rabbit_direct_send.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/83day/rabbit_fanout_recv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12第十二周/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12第十二周/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12第十二周/test3分批加载.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12第十二周/ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/83day/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/83day/rabbit_topic_send.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/83day/rabbit_topic_recv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/83day/rabbit_direct_recv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
